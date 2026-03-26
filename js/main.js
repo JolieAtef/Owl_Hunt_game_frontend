@@ -142,7 +142,7 @@ function showGameOverModal() {
 async function getTopFive(){
     document.querySelector(".top_items").innerHTML=""
     try{
-       const res = await fetch("http://localhost:3000/users/top_five")
+       const res = await fetch("https://owl-hunt-game-backend.vercel.app/users/top_five")
        const top_five = await res.json()
        top_five.data.map((top , i)=> (
           document.querySelector(".top_items").innerHTML+=
@@ -168,7 +168,7 @@ async function addHunter(name , level) {
         return 0
     }
     try{
-        const res = await fetch("http://localhost:3000/users/start_game",{
+        const res = await fetch("https://owl-hunt-game-backend.vercel.app/users/start_game",{
             method:"POST",
             headers: {
                 "Content-Type": "application/json"
@@ -190,7 +190,7 @@ async function setScore(currentUser , score) {
         return 0
     }
     try{
-        const res = await fetch(`http://localhost:3000/users/set_score/${currentUser}`,{
+        const res = await fetch(`https://owl-hunt-game-backend.vercel.app/users/set_score/${currentUser}`,{
             method:"PUT",
             headers: {
                 "Content-Type": "application/json"
