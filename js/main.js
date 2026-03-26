@@ -14,9 +14,11 @@ let timeLeft
 getTopFive()
 
 
+
 start_btn.addEventListener("click",function(){
     startGame()
 })
+
 
 sm_owl.forEach((el)=>el.addEventListener("click", function(){
     if (getComputedStyle(el).opacity > 0) {
@@ -25,10 +27,10 @@ sm_owl.forEach((el)=>el.addEventListener("click", function(){
         el.style.backgroundImage="url(../images/4.png)"
         setTimeout(()=>{  
             el.style.backgroundImage="url(../images/sm_owl.png)"
-        },1000)
-        
+        },1000)       
     }
 }))
+
 owl.forEach((el)=>el.addEventListener("click", function(){
     if (getComputedStyle(el).opacity > 0) {
         score+=5
@@ -39,7 +41,6 @@ owl.forEach((el)=>el.addEventListener("click", function(){
         },1000)
     }
 }))
-
 
 
 async function startGame(){  
@@ -71,11 +72,11 @@ function owlMove(level){
             speed=300
             show_speed="show_h"
             break; 
-        default:
+            default:
            speed=600
            show_speed="show_m"
            break;
-    }
+        }
     //  random 
     let owl_moving=setInterval(()=>{
         let randomNum_1 = Math.floor(Math.random() * 36);
@@ -146,7 +147,7 @@ async function getTopFive(){
        const top_five = await res.json()
        top_five.data.map((top , i)=> (
           document.querySelector(".top_items").innerHTML+=
-           `<div class="top_five_item rounded-2 d-flex mb-2">
+          `<div class="top_five_item rounded-2 d-flex mb-2">
             <span class="rank m-2 px-2 fw-bold fs-5">#${i+1}</span>
             <div class="rank_info rounded-4 w-75 d-flex justify-content-between align-items-center px-3">
             <span class="rank_name fw-bold fs-6">
@@ -203,3 +204,31 @@ async function setScore(currentUser , score) {
         console.log(err)
     }
 }
+
+
+
+// mobile enter info
+
+document.getElementById("name").addEventListener("focus",()=>{
+    if (window.innerWidth < 768) {
+         document.querySelector(".top_five").classList.add("opacity-0")
+     }
+})
+
+document.getElementById("level").addEventListener("focus",()=>{
+    if (window.innerWidth < 768) {
+        document.querySelector(".top_five").classList.add("opacity-0")
+    }
+})
+                
+document.getElementById("name").addEventListener("blur",()=>{
+    if (window.innerWidth < 768) {
+        document.querySelector(".top_five").classList.remove("opacity-0")
+     }
+})
+
+document.getElementById("level").addEventListener("blur",()=>{
+   if (window.innerWidth < 768) {
+       document.querySelector(".top_five").classList.remove("opacity-0")
+      }
+  })
