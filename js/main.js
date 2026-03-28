@@ -80,9 +80,11 @@ function owlMove(level){
     //  random 
     let owl_moving=setInterval(()=>{
         let randomNum_1 = Math.floor(Math.random() * 36);
-        let randomNum_2 = 35-randomNum_1
+        let randomNum_2 = Math.abs(15-randomNum_1)
+        let randomNum_3 = 35-randomNum_1
         owls[randomNum_1].classList.toggle(show_speed)
         owls[randomNum_2].classList.toggle(show_speed)  
+        owls[randomNum_3].classList.toggle(show_speed) 
     },speed)
 
     timerInterval = setInterval(() => {
