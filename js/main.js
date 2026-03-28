@@ -95,7 +95,6 @@ function owlMove(level){
                         display_timer.style.transform = 'scale(1)'
                     }, 200)
                 }
-
      },1000)
 
     let game_time=setTimeout(()=>{
@@ -112,8 +111,13 @@ function endGame() {
     showGameOverModal()
     start_section.classList.add("down")
     start_section.classList.remove("up")
-    getTopFive()
 }
+
+// modal control
+const modal = new bootstrap.Modal(document.getElementById('gameOverModal'), { backdrop: 'static',  keyboard: false       })
+document.getElementById("closeBtn").addEventListener("click", () => {
+    closeModal()
+})
 
 function showGameOverModal() {
     document.getElementById('finalScore').innerText = score
@@ -132,9 +136,12 @@ function showGameOverModal() {
     }
     
     document.getElementById('scoreMessage').innerText = message
-    
-    const modal = new bootstrap.Modal(document.getElementById('gameOverModal'))
     modal.show()
+}
+
+function closeModal(){
+    modal.hide()
+    getTopFive()
 }
 
 
