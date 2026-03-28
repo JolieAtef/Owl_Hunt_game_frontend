@@ -103,10 +103,11 @@ A modern, interactive web-based hunting game where players test their reflexes b
 
 
 
+
 **🎮 Ready to test your reflexes? Start hunting those owls!**
 https://owl-hunt-game-frontend.vercel.app/
 
 
-https://github.com/user-attachments/assets/b01e8a9c-0c8a-4df2-9689-f95180cb54f9
+![Capture](https://github.com/user-attachments/assets/fcbebd3f-1db2-4a4e-af76-043c5c82ebdf)
 ![photo_3](https://github.com/user-attachments/assets/789b3a6f-1229-46f9-819d-ce2e304410b1)
 ![capture 2](https://github.com/user-attachments/assets/e8a1563a-8d58-45b9-97ec-ee6e08dfba32)
