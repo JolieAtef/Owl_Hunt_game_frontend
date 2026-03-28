@@ -53,18 +53,6 @@ A modern, interactive web-based hunting game where players test their reflexes b
 - **JSON Communication**: Structured data exchange
 - **Error Handling**: Comprehensive try-catch blocks
 
-## 🎨 Design System
-
-### Color Palette
-- **Primary Pink**: `#eb4cdb` - Accents and highlights
-- **Cyan Blue**: `#81ECFF` - Text and UI elements  
-- **Dark Blue**: `#061c2f` - Backgrounds and borders
-- **Semi-transparent**: `#081b2cb5` - Glass-morphism effects
-
-### Typography
-- **Font Hierarchy**: Clear distinction between headers and body text
-- **Responsive Sizing**: Scalable text across all devices
-- **High Contrast**: Optimized readability
 
 ### Animations
 - **Owl Appearances**: Fade in/out based on difficulty
@@ -105,12 +93,6 @@ A modern, interactive web-based hunting game where players test their reflexes b
 - **Gradient Backgrounds**: Dynamic color transitions
 - **Custom Animations**: Smooth, performant CSS animations
 - **Responsive Layout**: Perfect experience on all devices
-
-### Technical Excellence
-- **Clean Architecture**: Separation of concerns
-- **Error Handling**: Robust API communication
-- **Performance**: Optimized animations and rendering
-- **Accessibility**: Semantic HTML and ARIA support
 
 ### User Experience
 - **Intuitive Controls**: Simple click-based gameplay
